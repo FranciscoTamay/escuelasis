@@ -19,3 +19,9 @@ Route::get('/', function () {
 
 Route::view('inico','index');
 Route::view('login','login');
+Route::view('alumnos','alumnos');
+Route::view('','');
+
+
+//Aqui se enrutan las apis
+Route::apiResource('apiAlumnos','AlumnosController');

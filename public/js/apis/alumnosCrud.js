@@ -34,6 +34,26 @@ function init(){
                 console.log.json;
             });
         },
+
+        showModal:function(){
+            this.matricula='',
+            this.nombre='',
+            this.apellidos='',
+            this.grupo='',
+            
+            $('#modalAlum').modal('show');
+        },
+
+        addAlumno:function(){
+            var alumno={matricula:this.matricula,nombre:this.nombre,apellidos:this.apellidos,grupo:this.grupo};
+            this.$http.post(Apialumnos,alumno).then(function(json){
+                console.log('awevo se agrego');
+                this.getAlumnos();
+            }).catch(function(json){
+                console.log(json);
+            });
+            $('#modalAlum').modal('hide');
+        },
       },
 
 

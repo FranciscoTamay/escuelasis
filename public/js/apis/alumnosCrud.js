@@ -39,8 +39,7 @@ function init(){
             this.matricula='',
             this.nombre='',
             this.apellidos='',
-            this.grupo='',
-            
+            this.grupo='';
             $('#modalAlum').modal('show');
         },
 
